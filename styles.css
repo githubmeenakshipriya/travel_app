@@ -424,3 +424,48 @@ a:hover {
   border-radius: 5px;
   min-height: 45vh;
 }
+/* CSS styles for mobile */
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  nav ul li ul.dropdown {
+    position: static;
+    display: block;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  nav ul li.dropdown:hover .dropdown-content {
+    display: block;
+    width: auto;
+  }
+
+  .background-image {
+    height: 70vh;
+  }
+
+  .register-form,
+  .login-form {
+    width: 90%;
+  }
+}

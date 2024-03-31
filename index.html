@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <title>Welcome to World Travel</title>
+</head>
+<body>
+  <nav>
+    <div class="brand">
+      <img src="logo.jpg" alt="Logo" width="40" height="40"> 
+	  <p style=color:white;>World Tour<p/>
+    </div>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#book">Book</a></li>
+			<li class="dropdown">
+			<a href="#package">Packages</a>
+			<ul class="dropdown-content">
+				<li><a href="#">United States</a></li>
+				<li><a href="#">India</a></li>
+				<li><a href="#">France</a></li>
+				<li><a href="#">Germany</a></li>
+			</ul>
+          </li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about-us">About</a></li>
+    <div class="auth" style="text-align: right">
+		<a href="login.html">
+			<button class="login-btn">Login</button>
+		</a>
+	   <a href="register.html">
+			<button type="button" class="register-btn" >Register</button>
+	   </a>
+    </div>
+  </nav>
+  <main>
+    <section class="background-image">
+      <div class="welcome-text">
+        <h2>Welcome to World Travel</h2>
+        <h1>Visit<span id="placeName"></span></h1>
+      </div>
+    </section>
+    <section class="content">
+      <div class="brand-image">
+        <!-- Add image related to brand or company -->
+        <img src="brand.jpg" alt="Brand Image" height="390" width="900">
+      </div>
+      <form id="book">
+        <label for="whereTo">Where to:</label>
+        <select id="whereTo">
+          <option value="New York">New York</option>
+          <option value="Paris">Paris</option>
+          <option value="Tokyo">Tokyo</option>
+        </select><br><br>
+        <label for="howMany">How Many Persons:</label>
+        <input type="number" id="howMany" min="1"><br><br>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" min="2024-02-24"><br><br>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" min="2024-02-25"><br><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" rows="4" cols="50" minlength="50" maxlength="500"></textarea><br><br>
+        <button type="button" onclick="validateBooking()">Book Now</button>
+      </form>
+    </section>
+    <div class="container">
+  <!-- Package Gallery Section -->
+  <div id="package" class="section-title">Package</div>
+  <div class="package-row">
+    <!-- Package 1 -->
+    <div class="package-card">
+      <img src="place1.png" alt="Place 1">
+      <div class="package-name">Taj Mahal - India</div>
+      <div class="package-attractions">This magnificent landmark took 16 years and 20,000 workers to build! 
+	  It was commissioned to be built in 1632 by Emperor Shah Jahan with the purpose of housing the tomb of his wife, Mumtaz. </div>
+      <div class="package-price">$500</div>
+      <div class="package-rating">
+        Rating: 
+        <span class="rating-stars">★★★★★</span>
+      </div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+    <!-- Package 2 -->
+    <div class="package-card">
+      <img src="place2.png" alt="Place 2">
+      <div class="package-name">Colosseum - Italy</div>
+      <div class="package-attractions">The Colosseum in Rome, Italy, is a large amphitheater that hosted events like gladiatorial games.
+	  The Colosseum, also named the Flavian Amphitheater, is a large amphitheater in Rome. </div>
+      <div class="package-price">$700</div>
+      <div class="package-rating">
+        Rating: 
+        <span class="rating-stars">★★★★★</span>
+      </div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+    <!-- Package 3 -->
+    <div class="package-card">
+      <img src="place3.png" alt="Place 3">
+      <div class="package-name">The Great Wall of China</div>
+      <div class="package-attractions">The Great Wall of China is one of the most notorious structures in the entire world. 
+	  One of the world’s largest building-construction projects, the Great Wall of China is widely about 5,500 miles</div>
+      <div class="package-price">$600</div>
+      <div class="package-rating">
+        Rating: 
+        <span class="rating-stars">★★★★★</span>
+      </div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+  </div>
+	<div class="section-title">Services</div>
+  <div class="services">
+    <!-- Service 1 -->
+    <div id="services" class="service-card">
+      <div class="service-name">Affordable Hotel</div>
+      <p>Find budget-friendly accommodations for your stay, without compromising comfort or quality.</p>
+    </div>
+    <!-- Service 2 -->
+    <div class="service-card">
+      <div class="service-name">Food & Drinks</div>
+      <p>Explore a variety of culinary delights and refreshing beverages, catering to every palate and preference.</p>
+    </div>
+    <!-- Service 3 -->
+    <div class="service-card">
+      <div class="service-name">Safety Guide</div>
+      <p>Access comprehensive safety tips and guidelines to ensure a secure and worry-free travel experience.</p>
+    </div>
+    <!-- Service 4 -->
+    <div class="service-card">
+      <div class="service-name">Transportation</div>
+      <p>Reliable and efficient transportation services to get you to your destinations hassle-free.</p>
+    </div>
+    <!-- Service 5 -->
+    <div class="service-card">
+      <div class="service-name">Tour Guides</div>
+      <p>Explore local attractions with knowledgeable guides who provide insightful commentary and personalized experiences.</p>
+    </div>
+    <!-- Service 6 -->
+    <div class="service-card">
+      <div class="service-name">Adventure Activities</div>
+      <p>Embark on thrilling adventures like hiking, rafting, and zip-lining, creating unforgettable memories.</p>
+    </div>
+	<div id="gallery" class="section-title">Gallery</div>
+	  <div class="gallery">
+		<div class="gallery-item">
+		  <img src="gallery1.jpg" alt="Gallery 1" height="250">
+		</div>
+		<div class="gallery-item">
+		  <img src="gallery2.jpg" alt="Gallery 2" height="250">
+		</div>
+		<div class="gallery-item">
+		  <img src="gallery3.jpg" alt="Gallery 3" height="250">
+		</div>
+		<div class="gallery-item">
+		  <img src="gallery4.jpg" alt="Gallery 4" height="250">
+		</div>
+		<div class="gallery-item">
+		  <img src="gallery5.jpg" alt="Gallery 5" height="250">
+		</div>
+		<div class="gallery-item">
+		  <img src="gallery6.jpg" alt="Gallery 6" height="250">
+		</div>
+	  </div>
+	
+	<!-- About Us Section -->
+  <div id="about-us" class="row">
+    <div class="col">
+      <img src="company.jpg" alt="Company Logo" height="440" width="550">
+    </div>
+    <div class="col company-info">
+      <h2>About Us</h2>
+	  <p>Welcome to our tourism website! We are passionate about helping travelers explore the world and create unforgettable experiences. Whether you're seeking adventure, relaxation, or cultural immersion, we're here to make your journey seamless and memorable.</p>
+	  <p>Our team consists of experienced travel experts who are dedicated to providing personalized service and expert guidance. From planning your itinerary to booking accommodations and activities, we handle every detail with care and attention.</p>
+	  <div class="contact-details">
+		<h2>Contact Details</h2>
+		<p>If you have any questions or inquiries, please don't hesitate to contact us:</p>
+		<p>Email: info@tourismwebsite.com</p>
+		<p>Phone: +1-123-456-7890</p>
+		<p>Address: 123 Main Street, City, Country</p>
+	</div>
+    </div>
+  </div>
+
+	<div class="footer">
+	  <p>World Tour</p>
+	  <a href="#"><img src="instagram-icon.jpg" alt="Instagram" height="10">Instagram</a>
+	  <a href="#"><img src="facebook_icon.png" alt="Facebook" height="10">Facebook</a>
+	  <p>&copy; 2024 All Rights Reserved.</p>
+	</div>
+  </main>
+</body>
+</html>
+

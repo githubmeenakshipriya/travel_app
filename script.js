@@ -43,3 +43,14 @@ function validateForm() {
 
   return true;
 }
+ function validateLogin() {
+     var email = document.getElementById('email').value;
+     var password = document.getElementById('password').value;
+     // Example validation (replace with your own logic)
+      if (email === "123@123.com" && password === "123") {
+                return true; // Allow form submission
+       } else {
+           alert("Incorrect email or password!");
+           return false; // Prevent form submission
+      }
+}
